@@ -15,7 +15,7 @@ public class ObjInfo
 
     }
 
-    public static Set<String> visAlleMetoder(Object o) {
+    public static Set<String> alleObjectMetoder(Object o) {
 
         Set<String> stringSet = new HashSet<>();
 
@@ -31,7 +31,21 @@ public class ObjInfo
         return stringSet;
     }
 
-    public static Set<String> visObjektMetoder(Object o) {
+    public void visAlleMetoder(Object o) {
+
+        Set<String > stringSet = alleObjectMetoder(o);
+
+        for (String s : stringSet) {
+
+            System.out.println(s);
+        }
+
+        }
+
+
+
+
+    public static Set<String> objektMetoder(Object o) {
 
 
         Set<String> stringSet = new HashSet<>();
@@ -48,6 +62,18 @@ public class ObjInfo
 
         return stringSet;
     }
+
+    public static void visObjektMetoder(Object o) {
+
+        Set<String> stringSet = objektMetoder(o);
+
+        for (String s : stringSet) {
+            System.out.println(s);
+        }
+
+    }
+
+
 
     public static void visFelter(Object o) {
 
@@ -79,8 +105,8 @@ public class ObjInfo
 
     public static void visKunNedarvedeMetoder(Object o) {
 
-        Set<String> klasseMetoder = visObjektMetoder(o);
-        Set<String> alleMetoder = visAlleMetoder(o);
+        Set<String> klasseMetoder = objektMetoder(o);
+        Set<String> alleMetoder = ObjInfo.alleObjectMetoder(o);
 
         alleMetoder.removeAll(klasseMetoder);
 

@@ -1,7 +1,5 @@
 package com.company;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.util.*;
 
 public class Main {
@@ -126,7 +124,7 @@ public class Main {
 
         ObjInfo.visObjektMetoder(objInfo);
 
-        ObjInfo.visAlleMetoder(objInfo);
+        ObjInfo.visObjektMetoder(objInfo);
 
         ObjInfo.visKunNedarvedeMetoder(objInfo);
 
