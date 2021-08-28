@@ -120,13 +120,69 @@ public class Main {
 
 
 
-        ObjInfo objInfo = new ObjInfo();
+//        ObjInfo objInfo = new ObjInfo();
+//
+//        ObjInfo.visObjektMetoder(objInfo);
+//
+//        ObjInfo.visObjektMetoder(objInfo);
+//
+//        ObjInfo.visKunNedarvedeMetoder(objInfo);
 
-        ObjInfo.visObjektMetoder(objInfo);
+        // igen et eks på polymorfi.
+        Set<String > stringSet = new HashSet<>();
+        stringSet = new LinkedHashSet<>();
+        stringSet = new TreeSet<>();
 
-        ObjInfo.visObjektMetoder(objInfo);
+        Map<String, Object> objectMap = new HashMap<>();
 
-        ObjInfo.visKunNedarvedeMetoder(objInfo);
+        objectMap.put("MuKo", new Muko());
+        objectMap.put("Dansk", new Dansk());
+        objectMap.put("Pruhhest", new Pruhhest());
+        objectMap.put("ObjInfo", new ObjInfo());
+        objectMap.put("Map", new HashMap<>());
+        objectMap.put("TreeSet", new TreeSet<>());
+        objectMap.put("div0", new ArithmeticException());
+
+        // arveherakiet udskrives bagfra ift den måde man tegner dem på. Opgaven til torsdag er at vende listen om,
+        // så udskrive på samme som et gennemløb fra bunden.
+
+        //hvis din git driller som kom til workshop hos ThorBjørn på tirsdag.
+
+        // vi ses på torsdag
+
+
+      //  System.out.println(objectMap.getOrDefault(getInput("skriv en type :"), new Object()).getClass().getSimpleName());
+
+//        ObjInfo.visSuperKlasse(objectMap.getOrDefault(getInput("skriv en type"), new Object()));
+//
+//        Set<String> strings = objectMap.keySet();
+//
+//        System.out.println("her kan du se alle de klasser du kan vælge i mellem ");
+//
+//        for (String string : strings) {
+//
+//         //   System.out.println(string);
+//        }
+
+//
+//        Object o = objectMap.getOrDefault(getInput("skriv en klasse"), new Object() );
+//
+//        Class < ? > obj = o.getClass();
+//        System.out.println(obj.getSimpleName());
+//
+//        while (true) {
+//
+//            obj = obj.getSuperclass();
+//            System.out.println(obj.getSimpleName());
+//            if (obj.getSimpleName().equals("Object")) {
+//                break;
+//            }
+
+
+
+            ObjInfo.udskrivheleKlasseHerakiet(objectMap);
+
+
 
 
 
